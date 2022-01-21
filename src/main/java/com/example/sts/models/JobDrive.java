@@ -23,6 +23,7 @@ public class JobDrive {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private String comName;
 	private String jobType;
 	private String jobSalary;
 	private String jobVacancy;

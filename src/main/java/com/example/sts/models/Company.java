@@ -29,6 +29,7 @@ public class Company {
 	private String comAddress;
 	private String comEmail;
 	private String comDescription;
+	private String comType;
 	
 	
 }
