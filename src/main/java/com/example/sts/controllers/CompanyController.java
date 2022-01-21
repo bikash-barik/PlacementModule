@@ -57,7 +57,6 @@ public class CompanyController {
 		
 		
 		// update company rest api
-		
 		@PutMapping("/companys/{id}")
 		@PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
 		public ResponseEntity<Company> updateCompany(@PathVariable Integer id, @RequestBody Company companyDetails){
@@ -68,6 +67,7 @@ public class CompanyController {
 			company.setComAddress(companyDetails.getComAddress());
 			company.setComEmail(companyDetails.getComEmail());
 			company.setComDescription(companyDetails.getComDescription());
+			company.setComType(companyDetails.getComType());
 			
 			
 			Company updatedCompany = companyRepository.save(company);
