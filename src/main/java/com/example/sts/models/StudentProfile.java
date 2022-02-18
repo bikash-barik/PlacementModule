@@ -1,9 +1,13 @@
 package com.example.sts.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -39,9 +43,14 @@ public class StudentProfile {
 	private String currentAddress;
 	private String class10grade;
 	private String class12grade;
-	private String currentdegreegrade;
+	private String currentdegreegrade; 
 	private String cpi;
 	private String currentBacklogs;
 	private String totalBacklogs;
+	
+//	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL , mappedBy = "studentProfile")
+	@OneToOne()
+	@JoinColumn(name ="up_id")
+	private User user;
 
 }
