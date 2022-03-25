@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -48,9 +50,9 @@ public class StudentProfile {
 	private String currentBacklogs;
 	private String totalBacklogs;
 	
+	
+	  
 //	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL , mappedBy = "studentProfile")
-	@OneToOne()
-	@JoinColumn(name ="up_id")
-	private User user;
-
+	
+	
 }

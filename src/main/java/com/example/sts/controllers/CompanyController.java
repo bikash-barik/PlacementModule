@@ -67,6 +67,10 @@ public class CompanyController {
 			company.setComAddress(companyDetails.getComAddress());
 			company.setComEmail(companyDetails.getComEmail());
 			company.setComDescription(companyDetails.getComDescription());
+			company.setComStaffName(companyDetails.getComStaffName());
+			company.setComMeetTime(companyDetails.getComMeetTime());
+			company.setComMeetDate(companyDetails.getComMeetDate());
+			company.setComDriveDate(companyDetails.getComDriveDate());
 			company.setComType(companyDetails.getComType());
 			
 			
