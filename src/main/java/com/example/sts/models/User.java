@@ -38,6 +38,14 @@ public class User {
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 
+	
+	@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "studentProfile_id")
+	private StudentProfile studentProfile;
+//	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
+
+	
+	
 	public User() {
 	}
 
@@ -86,4 +94,9 @@ public class User {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+	
+	
+	 
+	
+	
 }

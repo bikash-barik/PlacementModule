@@ -81,6 +81,9 @@ public class JobController {
 					jobdrive.setJobType(jobdriveDetails.getJobType());
 					jobdrive.setJobSalary(jobdriveDetails.getJobSalary());
 					jobdrive.setJobVacancy(jobdriveDetails.getJobVacancy());
+					jobdrive.setJobDate(jobdriveDetails.getJobDate());
+					jobdrive.setJobRound(jobdriveDetails.getJobRound());
+					jobdrive.setJobCriteria(jobdriveDetails.getJobCriteria());
 					jobdrive.setJobDescription(jobdriveDetails.getJobDescription());
 					JobDrive updatedJobDrive = jobdriveRepository.save(jobdrive);
 					return ResponseEntity.ok(updatedJobDrive);
